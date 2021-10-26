@@ -1,0 +1,14 @@
+a{
+    justify-content: space-between;
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    text-align: center;
+
+
+}
+
+a:hover{
+    color: #F0c330;
+    transition: 0.5s;
+}
