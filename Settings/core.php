@@ -14,8 +14,9 @@ function check_login(){
 	if (!isset($_SESSION['user_id'])) 
 	{
 		//redirect to login page
-    	header('Location: ../login/login.php');
+    	header('Location: ../Login/login.php');
 	}
+	return true;
 }
 
 //function to check for permission 

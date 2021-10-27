@@ -19,7 +19,7 @@ if(isset($_POST['btn'])){
         header("Location: ../Login/login.php");
         echo "insertion successful!";
     }else{
-        echo "insertion successful!";
+        echo "insertion not successful!";
     }
    
 }

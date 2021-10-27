@@ -14,6 +14,7 @@
         <h1 style="font-size: 5rem;">Welcome to E-commerce</h1>
         <a style="font-size: 1.5rem;" href="../Login/register.php">Register</a>
         <a style="font-size: 1.5rem;" href="../Login/login.php">Log out</a>
+        <a style="font-size: 1.5rem;" href="../Login/login.php">Brand</a>
         
     </div>
 
