@@ -10,7 +10,6 @@ require('../controllers/customer_controller.php');
  $contact_number = $_POST["phone"];
 
 
-
 if(isset($_POST['btn'])){
 
     $result = add_customer_controller($full_name, $email, $password,$country, $city, $contact_number);

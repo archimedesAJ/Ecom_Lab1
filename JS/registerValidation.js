@@ -14,8 +14,6 @@ var getDetails = function(form){
     var regPhone = /\+?\d{6,15}$/;
     
     
-
-
     if (!regName.test(fullName)){
         alert("Please enter your full name correctly. Please do not use special characters or numbers.");
         full_name = false;

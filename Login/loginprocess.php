@@ -20,8 +20,8 @@
 		else{
 			if (password_verify($password, $result['customer_pass'])){
 				$_SESSION['user_id'] = $result['customer_id'];
-				//$_SESSION['user_role'] = $result['user_role'];
-				header("Location: ../View/index.php");
+				$_SESSION['user_role'] = $result['user_role'];
+				header("Location: ../Admin/Brand.php");
 			}
 			else{
                 $_SESSION['error'] = 'Incorrect password';
