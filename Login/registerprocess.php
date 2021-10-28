@@ -1,6 +1,6 @@
 <?php
 
-require('../controllers/customer_controller.php');
+require('../Controllers/customer_controller.php');
 
  $full_name = $_POST["name"];
  $email = $_POST["email"];
