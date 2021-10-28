@@ -1,6 +1,6 @@
 <?php
 
-require('../Controllers/brand_controller.php');
+require('../Controllers/product_controller.php');
 
  $brand_name = $_POST["brand_name"];
 

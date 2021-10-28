@@ -1,6 +1,6 @@
 <?php
 
-require('../Controllers/brand_controller.php');
+require('../Controllers/product_controller.php');
 
 if(isset($_POST['update'])){
     $brand_id = $_POST['brand_id'];

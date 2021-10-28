@@ -1,8 +1,8 @@
 <?php
 
-//require('../Controllers/brand_controller.php');
+require('../Controllers/product_controller.php');
 // return array of all rows, or false (if it failed)
-//$brands = select_all_brands_controller();
+$categories = select_all_categories_controller();
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +23,10 @@
     <div id="form">
     <h2>Brand Form</h2>
         <div id="form-area">
-            <form onsubmit="return getBrandDetails(this)" action="../Actions/Add_brand.php" id="form" method="post">
+            <form onsubmit="return getBrandDetails(this)" action="../Actions/Add_Category.php" id="form" method="post">
                 <div class="field-group">
-                    <label for="name">Category</label>
-                    <input type="text" id="brand_name" required="true" name="brand_name" placeholder="Brand Name">
+                    <label for="cat_name">Category</label>
+                    <input type="text" id="cat_name" required="true" name="cat_name" placeholder="Category Name">
                 </div>
                 <button id="next" type="submit" name="btn" value="submit">Add Category</button>
             </form>
@@ -41,7 +41,7 @@
 <table class="table">
         <thead>
             <tr>
-                <th>Brand Name</th>
+                <th>Category Name</th>
 				<th></th>
 				<th></th>
             </tr>
@@ -49,12 +49,13 @@
 
         <tbody>
 			<?php
-			foreach($brands as $brand){
+			foreach($categories as $category){
 				echo 
 				"
 				<tr>
-					<td>{$brand['brand_name']}</td>
-					<td><a href='../Admin/Brandedit.php?id={$brand['brand_id']}'>Edit</a></td>
+					<td>{$category['cat_name']}</td>
+					<td><a href='../Admin/Categoryedit.php?id={$category['cat_id']}'>Edit</a></td>
+                    <td><a href='../Admin/Categoryedit.php?id={$category['cat_id']}'>Delete</a></td>
 				</tr>
 				";
 			}
@@ -65,7 +66,7 @@
         </tbody>
 </table>
 </body>
-<script type="text/javascript"  src="../JS/brandValidation.js"></script>
+<script type="text/javascript" src="../JS/categoryValidation.js"></script>
 </html>
 
 

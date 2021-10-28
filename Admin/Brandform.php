@@ -1,6 +1,6 @@
 <?php
 
-require('../Controllers/brand_controller.php');
+require('../Controllers/product_controller.php');
 // return array of all rows, or false (if it failed)
 $brands = select_all_brands_controller();
 ?>
@@ -26,7 +26,7 @@ $brands = select_all_brands_controller();
             <form onsubmit="return getBrandDetails(this)" action="../Actions/Add_brand.php" id="form" method="post">
                 <div class="field-group">
                     <label for="brand_name">Brand</label>
-                    <input type="text" id="brand_name"  name="brand_name" placeholder="Brand Name">
+                    <input type="text" id="brand_name"  required="true" name="brand_name" placeholder="Brand Name">
                 </div>
                 <button id="next" type="submit" name="btn" value="submit">Add Brand</button>
             </form>

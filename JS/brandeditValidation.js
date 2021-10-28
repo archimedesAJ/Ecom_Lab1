@@ -1,4 +1,4 @@
-var getBrandDetails = function(form){
+var getBrandDetail = function(form){
     let brand_state;
     let brand_name = document.getElementById("brand_name").value;
 
@@ -23,7 +23,7 @@ var getBrandDetails = function(form){
     }
     else{
         localStorage.setItem('brand_name', brand_name);
-        window.location.href= "../Actions/Add_brand.php";
+        window.location.href= "../Actions/Update_brand.php";
     }
 
 }

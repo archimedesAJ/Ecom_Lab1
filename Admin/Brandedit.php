@@ -1,6 +1,6 @@
 <?php
 
-require('../Controllers/brand_controller.php');
+require('../Controllers/product_controller.php');
 // return array of all rows, or false (if it failed)
 $brand = select_one_brand_controller($_GET['id']);
 ?>
@@ -23,20 +23,20 @@ $brand = select_one_brand_controller($_GET['id']);
     <div id="form">
     <h2>Update Brand</h2>
         <div id="form-area">
-            <form onsubmit="return getBrandDetails(this)" action="../Actions/Update_brand.php" id="form" method="post">
+            <form onsubmit="return getBrandDetail(this)" action="../Actions/Update_brand.php" id="form" method="post">
                 <div class="field-group">
                     <input type="hidden" id="brand_name" required="true" name="brand_id" placeholder="Brand Name" value="<?php echo $brand['brand_id'] ?>">
                 </div>
                 <div class="field-group">
-                    <label for="name">Brand</label>
-                    <input type="text" id="brand_name" required="true" name="brand_name" placeholder="Brand Name" value="<?php echo $brand['brand_name'] ?>">
+                    <label for="brand_name">Brand</label>
+                    <input type="text" id="brand_name" name="brand_name" required="true" placeholder="Brand Name" value="<?php echo $brand['brand_name'] ?>">
                 </div>
                 <button id="next" type="submit" name="update" value="submit">Save Changes</button>
             </form>
         </div>
 </div>
 </body>
-<script type="text/javascript"  src="../JS/brandValidation.js"></script>
+<script type="text/javascript" src="../JS/brandeditValidation.js"></script>
 </html>
 
 
