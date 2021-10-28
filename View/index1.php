@@ -15,6 +15,8 @@
         <a style="font-size: 1.5rem;" href="../Login/register.php">Register</a>
         <a style="font-size: 1.5rem;" href="../Login/login.php">Log out</a>
         <a style="font-size: 1.5rem;" href="../Admin/Brandform.php">Brand</a>
+        <a style="font-size: 1.5rem;" href="../Admin/Categoryform.php">Category</a>
+        
         
     </div>
 

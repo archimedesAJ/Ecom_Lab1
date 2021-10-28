@@ -1,8 +1,8 @@
 <?php
 
-require('../Controllers/brand_controller.php');
+//require('../Controllers/brand_controller.php');
 // return array of all rows, or false (if it failed)
-$brands = select_all_brands_controller();
+//$brands = select_all_brands_controller();
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +25,10 @@ $brands = select_all_brands_controller();
         <div id="form-area">
             <form onsubmit="return getBrandDetails(this)" action="../Actions/Add_brand.php" id="form" method="post">
                 <div class="field-group">
-                    <label for="brand_name">Brand</label>
-                    <input type="text" id="brand_name"  name="brand_name" placeholder="Brand Name">
+                    <label for="name">Category</label>
+                    <input type="text" id="brand_name" required="true" name="brand_name" placeholder="Brand Name">
                 </div>
-                <button id="next" type="submit" name="btn" value="submit">Add Brand</button>
+                <button id="next" type="submit" name="btn" value="submit">Add Category</button>
             </form>
         </div>
 </div>
@@ -65,7 +65,7 @@ $brands = select_all_brands_controller();
         </tbody>
 </table>
 </body>
-<script type="text/javascript" src="../JS/brandValidation.js"></script>
+<script type="text/javascript"  src="../JS/brandValidation.js"></script>
 </html>
 
 

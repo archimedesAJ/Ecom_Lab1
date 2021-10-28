@@ -5,16 +5,19 @@ var getBrandDetails = function(form){
 
     var regBrandName = /(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/;
     
-    
 
-    if (!regBrandName.test(brand_name) || brand_name == " "){
-        alert("Please enter a brand_name or use appropriate characters not numbers");
-        brand_state = false;
-        return false;
-    }else{
-        brand_state = true;
+    while (brand_name.length !==0){
+        if (!regBrandName.test(brand_name)){
+            alert("Please type an appropriate brand name. Do not use numbers or special characters!");
+            brand_state = false;
+            return false;
+        }else{
+            brand_state = true;
+        }
     }
+    alert("it's empty. Please type something");
 
+    
 
     let finalSate = brand_state;
 
