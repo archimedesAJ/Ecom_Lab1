@@ -8,8 +8,6 @@ else{
     header('Location: ../View/index.php');
 }
 
-
-
 ?>
 
 

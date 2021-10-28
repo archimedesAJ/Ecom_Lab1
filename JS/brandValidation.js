@@ -7,8 +7,8 @@ var getBrandDetails = function(form){
     
     
 
-    if (!regBrandName.test(brand_name) && brand_name == ""){
-        alert("Please enter a brand_name and use appropriate characters not numbers");
+    if (!regBrandName.test(brand_name) || brand_name == " "){
+        alert("Please enter a brand_name or use appropriate characters not numbers");
         brand_state = false;
         return false;
     }else{

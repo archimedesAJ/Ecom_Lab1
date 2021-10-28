@@ -32,7 +32,7 @@ function select_all_customers_controller(){
     //create an instance of the product class
     $customer_instance = new Customer();
     //call the method from the class
-    return $customer_instance->select_all_customer();
+    return $customer_instance->select_all_customers();
     
 }
 
