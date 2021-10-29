@@ -2,7 +2,7 @@
 
 require('../Controllers/product_controller.php');
 // return array of all rows, or false (if it failed)
-$brand = select_one_brand_controller($_GET['id']);
+$category = select_one_category_controller($_GET['id']);
 ?>
 
 <!DOCTYPE html>
@@ -23,20 +23,20 @@ $brand = select_one_brand_controller($_GET['id']);
     <div id="form">
     <h2>Update Brand</h2>
         <div id="form-area">
-            <form onsubmit="return getBrandDetail(this)" action="../Actions/Update_brand.php" id="form" method="post">
+            <form onsubmit="return getBrandDetail(this)" action="../Actions/Update_category.php" id="form" method="post">
                 <div class="field-group">
-                    <input type="hidden" id="brand_id" required="true" name="brand_id" placeholder="Brand Name" value="<?php echo $brand['brand_id'] ?>">
+                    <input type="hidden" id="cat_id" required="true" name="cat_id" placeholder="Cat ID" value="<?php echo $category['cat_id'] ?>">
                 </div>
                 <div class="field-group">
-                    <label for="brand_name">Brand</label>
-                    <input type="text" id="brand_name" name="brand_name" placeholder="Brand Name" value="<?php echo $brand['brand_name'] ?>">
+                    <label for="cat_name">Category</label>
+                    <input type="text" id="cat_name" name="cat_name" placeholder="Category Name" value="<?php echo $category['cat_name'] ?>">
                 </div>
                 <button id="next" type="submit" name="update" value="submit">Save Changes</button>
             </form>
         </div>
 </div>
 </body>
-<script type="text/javascript" src="../JS/brandeditValidation.js"></script>
+<script type="text/javascript" src="../JS/categoryeditValidation.js"></script>
 </html>
 
 

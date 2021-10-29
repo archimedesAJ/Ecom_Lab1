@@ -1,6 +1,6 @@
 <?php
 
-require('../Controllers/brand_controller.php');
+require('../Controllers/product_controller.php');
 
 if(isset($_POST['update'])){
     $brand_id = $_POST['brand_id'];
@@ -10,7 +10,7 @@ if(isset($_POST['update'])){
 $result = update_brand_controller($brand_id, $brand_name);
 
 
-if ($result === true) header("Location: ../Admin/Brandform.php");
+if ($result === true) header("Location: ../Admin/Brand.php");
 
 else echo "update failed ";
 

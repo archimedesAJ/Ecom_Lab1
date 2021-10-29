@@ -3,8 +3,8 @@
 require('../Settings/db_class.php');
 
 //extending means inheriting all the methods from connection
-class Products extends Connection{
-
+class Product extends Connection{
+    /*Details of Products */
     //methods for adding product
     function add_product($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword){
         //retrun true or false
@@ -37,6 +37,57 @@ class Products extends Connection{
     }
 
 
+    /*Details of Brands */
+    //methods for adding brand
+    function add_brand($brand_name){
+        //retrun true or false
+        return $this->query("insert into brands(brand_name) values('$brand_name')");
+    }
+
+
+    //methods for selecting all brands
+    function select_all_brands(){
+        //return array or false
+        return $this->fetch("select * from brands");
+    }
+
+    //methods for selecting one brand
+    function select_one_brand($id){
+        //return associative array or false
+        return $this->fetchOne("select * from brands where brand_id='$id'");
+    }
+
+    //method for update one brand
+    function update_one_brand($brand_id, $brand_name){
+        //return true or false
+        return $this->query("update brands set brand_name='$brand_name' where brand_id='$brand_id'");
+    }
+
+    /*Details of Category */
+    //methods for adding category
+    function add_category($cat_name){
+        //retrun true or false
+        return $this->query("insert into categories(cat_name) values('$cat_name')");
+    }
+
+    //methods for selecting all categories
+    function select_all_categories(){
+        //return array or false
+        return $this->fetch("select * from categories");
+    }
+
+    //methods for selecting one brand
+    function select_one_category($id){
+        //return associative array or false
+        return $this->fetchOne("select * from categories where cat_id='$id'");
+    }
+
+    //method for update one brand
+    function update_one_category($cat_id, $cat_name){
+        //return true or false
+        return $this->query("update categories set cat_name='$cat_name' where cat_id='$cat_id'");
+    }
+    
 }
 
 ?>

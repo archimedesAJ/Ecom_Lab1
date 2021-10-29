@@ -1,8 +1,9 @@
-var getBrandDetails = function(form){
+var getBrandDetail = function(form){
     let brand_state;
     let brand_name = document.getElementById("brand_name").value;
+    
 
-
+    //checks if the input is not empty!
     if (brand_name.length == 0){
         alert("Please brand name cannot be empty!.\n Please input something.");
         brand_state = false;
@@ -12,6 +13,7 @@ var getBrandDetails = function(form){
     }
 
 
+
     let finalSate = brand_state;
 
     if (!finalSate){
@@ -19,7 +21,7 @@ var getBrandDetails = function(form){
     }
     else{
         localStorage.setItem('brand_name', brand_name);
-        window.location.href= "../Actions/Add_brand.php";
+        window.location.href= "../Actions/Update_brand.php";
     }
 
 }
