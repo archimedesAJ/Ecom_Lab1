@@ -22,7 +22,7 @@
 				$_SESSION['user_id'] = $result['customer_id'];
 				$_SESSION['user_role'] = $result['user_role'];
 
-				if (check_login()==true && check_permission()==1){
+				if (check_login() && check_permission()==1){
 					header("Location: ../Admin/Brand.php");
 				}
 				else{
