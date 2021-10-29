@@ -7,7 +7,7 @@ var getBrandDetail = function(form){
     
 
     if (!regCatName.test(cat_name)){
-        alert("Please type an appropriate brand name. Do not use numbers or special characters!");
+        alert("Please type an appropriate brand name.\n Categories should not empty!.\n Do not use numbers or special characters!");
         cat_state = false;
         return false;
     }else{

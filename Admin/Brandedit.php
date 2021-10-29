@@ -29,7 +29,7 @@ $brand = select_one_brand_controller($_GET['id']);
                 </div>
                 <div class="field-group">
                     <label for="brand_name">Brand</label>
-                    <input type="text" id="brand_name" name="brand_name" required="true" placeholder="Brand Name" value="<?php echo $brand['brand_name'] ?>">
+                    <input type="text" id="brand_name" name="brand_name" placeholder="Brand Name" value="<?php echo $brand['brand_name'] ?>">
                 </div>
                 <button id="next" type="submit" name="update" value="submit">Save Changes</button>
             </form>

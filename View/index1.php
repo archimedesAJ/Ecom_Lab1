@@ -1,8 +1,8 @@
 <?php
+require('../Settings/core.php');
 if (check_login() && check_permission()==1){
-    header("Location: index1.php");
-}
-else{
+    echo "Hurray Welcome to Admin Page!";
+}else{
     header("Location: index.php");
 }
 ?>
@@ -23,8 +23,8 @@ else{
         <h1 style="font-size: 5rem;">Welcome to Index Page</h1>
         <a style="font-size: 1.5rem;" href="../Login/register.php">Register</a>
         <a style="font-size: 1.5rem;" href="../Logout/logout.php">Log out</a>
-        <a style="font-size: 1.5rem;" href="../Admin/Brandform.php">Brand</a>
-        <a style="font-size: 1.5rem;" href="../Admin/Categoryform.php">Category</a>
+        <a style="font-size: 1.5rem;" href="../Admin/Brand.php">Brand</a>
+        <a style="font-size: 1.5rem;" href="../Admin/Category.php">Category</a>
         
         
     </div>

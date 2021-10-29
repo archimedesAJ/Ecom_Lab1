@@ -10,7 +10,7 @@ if(isset($_POST['update'])){
 $result = update_brand_controller($brand_id, $brand_name);
 
 
-if ($result === true) header("Location: ../Admin/Brandform.php");
+if ($result === true) header("Location: ../Admin/Brand.php");
 
 else echo "update failed ";
 

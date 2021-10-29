@@ -29,7 +29,7 @@ $category = select_one_category_controller($_GET['id']);
                 </div>
                 <div class="field-group">
                     <label for="cat_name">Category</label>
-                    <input type="text" id="cat_name" name="cat_name" required="true" placeholder="Category Name" value="<?php echo $category['cat_name'] ?>">
+                    <input type="text" id="cat_name" name="cat_name" placeholder="Category Name" value="<?php echo $category['cat_name'] ?>">
                 </div>
                 <button id="next" type="submit" name="update" value="submit">Save Changes</button>
             </form>

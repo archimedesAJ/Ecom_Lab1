@@ -1,6 +1,12 @@
 <?php
-
+require('../Settings/core.php');
 require('../Controllers/product_controller.php');
+//check if the user_login and it's and admin
+if (check_login() && check_permission()==1){
+}else{
+    header("Location: ../View/index.php");
+}
+
 // return array of all rows, or false (if it failed)
 $brands = select_all_brands_controller();
 ?>
@@ -26,7 +32,7 @@ $brands = select_all_brands_controller();
             <form onsubmit="return getBrandDetails(this)" action="../Actions/Add_brand.php" id="form" method="post">
                 <div class="field-group">
                     <label for="brand_name">Brand</label>
-                    <input type="text" id="brand_name"  required="true" name="brand_name" placeholder="Brand Name">
+                    <input type="text" id="brand_name" name="brand_name" placeholder="Brand Name">
                 </div>
                 <button id="next" type="submit" name="btn" value="submit">Add Brand</button>
             </form>
@@ -55,7 +61,7 @@ $brands = select_all_brands_controller();
 				<tr>
 					<td>{$brand['brand_name']}</td>
 					<td><a href='../Admin/Brandedit.php?id={$brand['brand_id']}'>Edit</a></td>
-                    <td><a href='../Admin/Brandedit.php?id={$brand['brand_id']}'>Delete</a></td>
+                    <td><a href='../Admin/Branddelete.php?id={$brand['brand_id']}'>Delete</a></td>
 				</tr>
 				";
 			}

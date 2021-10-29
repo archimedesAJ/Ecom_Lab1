@@ -10,7 +10,7 @@ if(isset($_POST['update'])){
 $result = update_category_controller($cat_id, $cat_name);
 
 
-if ($result === true) header("Location: ../Admin/Categoryform.php");
+if ($result === true) header("Location: ../Admin/Category.php");
 
 else echo "update failed ";
 

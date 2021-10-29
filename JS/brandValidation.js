@@ -3,18 +3,14 @@ var getBrandDetails = function(form){
     let brand_name = document.getElementById("brand_name").value;
 
 
-    var regBrandName =  /^[a-zA-Z]+\s*[a-zA-Z]*$/;
-    
-
-    if (!regBrandName.test(brand_name)){
-        alert("Please type an appropriate brand name. Do not use numbers or special characters!");
+    if (brand_name.length == 0){
+        alert("Please brand name cannot be empty!.\n Please input something.");
         brand_state = false;
         return false;
     }else{
         brand_state = true;
     }
 
- 
 
     let finalSate = brand_state;
 
