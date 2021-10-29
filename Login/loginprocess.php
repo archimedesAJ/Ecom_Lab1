@@ -23,7 +23,7 @@
 				$_SESSION['user_role'] = $result['user_role'];
 
 				if (check_login() && check_permission()==1){
-					header("Location: ../Admin/Brand.php");
+					header("Location: ../View/index1.php");
 				}
 				else{
 					header("Location: ../View/index.php");
