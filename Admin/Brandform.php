@@ -55,6 +55,7 @@ $brands = select_all_brands_controller();
 				<tr>
 					<td>{$brand['brand_name']}</td>
 					<td><a href='../Admin/Brandedit.php?id={$brand['brand_id']}'>Edit</a></td>
+                    <td><a href='../Admin/Brandedit.php?id={$brand['brand_id']}'>Delete</a></td>
 				</tr>
 				";
 			}

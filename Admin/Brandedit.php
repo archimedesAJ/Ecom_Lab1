@@ -25,7 +25,7 @@ $brand = select_one_brand_controller($_GET['id']);
         <div id="form-area">
             <form onsubmit="return getBrandDetail(this)" action="../Actions/Update_brand.php" id="form" method="post">
                 <div class="field-group">
-                    <input type="hidden" id="brand_name" required="true" name="brand_id" placeholder="Brand Name" value="<?php echo $brand['brand_id'] ?>">
+                    <input type="hidden" id="brand_id" required="true" name="brand_id" placeholder="Brand Name" value="<?php echo $brand['brand_id'] ?>">
                 </div>
                 <div class="field-group">
                     <label for="brand_name">Brand</label>
