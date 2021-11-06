@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +16,50 @@
         <h1 style="font-size: 5rem;">Welcome to Index Page</h1>
         <a style="font-size: 1.5rem;" href="Login/login.php">Login Page</a>
         <a style="font-size: 1.5rem;" href="Login/register.php">Register Page</a>
-        
     </div>
+<!--
+<br>
+<br>
+<br>
+<br>
 
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Products</th>
+				<th></th>
+				<th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+			<?php
+			foreach($products as $product){
+				echo 
+				"
+				<tr>
+					<td>{$product['product_title']}</td>
+                    <td>{$product['product_price']}</td>
+                    <td>{$product['product_desc']}</td>
+                    <td>{$product['product_image']}</td>
+                    <td>{$product['product_image']}</td>
+					<td><a href='../Admin/Brandedit.php?id={$brand['brand_id']}'>View</a></td>
+                    <td><a href='../Admin/Branddelete.php?id={$brand['brand_id']}'>Add to Cart</a></td>
+				</tr>
+				";
+			}
+
+			?>
+
+		
+        </tbody>
+</table>
+
+        -->
 
 </body>
 

@@ -25,6 +25,8 @@ if (check_login() && check_permission()==1){
         <a style="font-size: 1.5rem;" href="../Logout/logout.php">Log out</a>
         <a style="font-size: 1.5rem;" href="../Admin/Brand.php">Brand</a>
         <a style="font-size: 1.5rem;" href="../Admin/Category.php">Category</a>
+        <a style="font-size: 1.5rem;" href="Product.php">Category</a>
+
         
         
     </div>

@@ -14,6 +14,7 @@
         <h1 style="font-size: 5rem;">Welcome to Index Page</h1>
         <a style="font-size: 1.5rem;" href="../Login/register.php">Register</a>
         <a style="font-size: 1.5rem;" href="../Logout/logout.php">Log out</a>
+        <a style="font-size: 1.5rem;" href="Product.php">Add Product</a>
         
     </div>
 

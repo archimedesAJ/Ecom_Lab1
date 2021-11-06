@@ -8,7 +8,7 @@ class Product extends Connection{
     //methods for adding product
     function add_product($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword){
         //retrun true or false
-        return $this->query("insert into products(product_cat,product_brand, product_title,product_price, product_desc, product_image, product_keywords) values('$full_name', '$email', '$password','$country', '$city', '$contact_number')");
+        return $this->query("insert into products(product_cat,product_brand, product_title,product_price, product_desc, product_image, product_keywords) values('$productCat', '$productBrand', '$productTitle','$productPrice', '$productDesc', '$productImage', '$productKeyword')");
     }
 
     //methods for selecting all products
@@ -25,12 +25,12 @@ class Product extends Connection{
     }
 
     //method for update one product
-    function update_one_customer($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword){
+    function update_one_product($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword){
         //return true or false
-        return $this->query("update customer set product_cat='$productCat',product_brand='$productBrand', product_title=' $productTitle', product_price='$productPrice', product_desc='$productDesc', product_image='$productImage', product_keywords='$productKeyword' where id='$id'");
+        return $this->query("update products set product_cat='$productCat',product_brand='$productBrand', product_title=' $productTitle', product_price='$productPrice', product_desc='$productDesc', product_image='$productImage', product_keywords='$productKeyword' where product_id='$id'");
     }
 
-    //method for selecting one customer
+    //method for selecting one product
     function select_one_product($id){
         //return associative array or false
         return $this->fetchOne("select * from products where product_id='$id'");
@@ -62,6 +62,8 @@ class Product extends Connection{
         //return true or false
         return $this->query("update brands set brand_name='$brand_name' where brand_id='$brand_id'");
     }
+
+
 
     /*Details of Category */
     //methods for adding category

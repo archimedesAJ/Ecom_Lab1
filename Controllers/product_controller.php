@@ -1,7 +1,6 @@
 <?php
-
 require('../Classes/product_class.php');
-
+/*Details about products */
 function add_product_controller($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword){
     //create an instance of the product class
     $product_instance = new Product();
@@ -9,6 +8,23 @@ function add_product_controller($productCat, $productBrand, $productTitle,$produ
     return $product_instance->add_product($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword);
 
 }
+
+function select_all_products_controller(){
+    $product_instance = new Product();
+    return $product_instance->select_all_products();
+}
+
+function delete_one_product_controller($id){
+    $product_instance = new Product();
+    return $product_instance->delete_one_product($id);
+}
+
+function update_one_product_controller($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword){
+    $product_instance = new Product();
+    return $product_instance->update_one_product($productCat, $productBrand, $productTitle,$productPrice, $productDesc, $productImage, $productKeyword);
+}
+
+
 
 /*Details about brands */
 function add_brand_controller($brand_name){
