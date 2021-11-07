@@ -36,6 +36,9 @@ class Product extends Connection{
         return $this->fetchOne("select * from products where product_id='$id'");
     }
 
+    function select_product_search($keyword){
+        return $this->fetch("select * from products where keyword LIKE %$keyword%");
+    }
 
     /*Details of Brands */
     //methods for adding brand
@@ -55,7 +58,16 @@ class Product extends Connection{
     function select_one_brand($id){
         //return associative array or false
         return $this->fetchOne("select * from brands where brand_id='$id'");
+
     }
+   
+    //methods for selecting one brand_name
+    function select_one_brand_name($id){
+        //return associative array or false
+        return $this->fetchOne("select brand_name from brands where brand_id='$id'");
+
+    }
+
 
     //method for update one brand
     function update_one_brand($brand_id, $brand_name){

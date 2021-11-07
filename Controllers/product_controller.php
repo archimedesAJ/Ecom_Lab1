@@ -25,6 +25,17 @@ function update_one_product_controller($productCat, $productBrand, $productTitle
 }
 
 
+function select_one_product_controller($id){
+    $product_instance = new Product();
+    return $product_instance->select_one_product($id);
+}
+
+function select_product_search_controller($keyword){
+    $product_instance = new Product();
+    return $product_instance->select_product_search($keyword);
+
+}
+
 
 /*Details about brands */
 function add_brand_controller($brand_name){
@@ -50,6 +61,13 @@ function select_one_brand_controller($id){
     //call the method from the class
     return $product_instance->select_one_brand($id);
     
+}
+
+function select_one_brand_name_controller($id){
+    //create an instance of the product class
+    $product_instance = new Product();
+    //call the method from the class
+    return $product_instance->select_one_brand_name($id);
 }
 
 function update_brand_controller($brand_id, $brand_name){

@@ -23,7 +23,7 @@ if(isset($_POST['submit_btn'])){
     $result = add_product_controller($productCat, $productBrand,$productTitle,$productPrice,$productDesc, $productImage,$productKeyword);
 
 
-    if($result === true) header("Location: ../index.php");
+    if($result === true) header("Location: ../index1.php");
     else echo "insertion failed";
 
 }
