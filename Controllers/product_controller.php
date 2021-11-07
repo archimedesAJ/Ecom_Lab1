@@ -105,6 +105,13 @@ function select_one_category_controller($id){
     
 }
 
+function select_one_category_name_category($id){
+     //create an instance of the product class
+     $product_instance = new Product();
+     //call the method from the class
+     return $product_instance->select_one_category_name($id);
+}
+
 function update_category_controller($cat_id, $cat_name){
     //create an instance of the product class
     $product_instance = new Product();

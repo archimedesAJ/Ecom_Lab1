@@ -96,6 +96,12 @@ class Product extends Connection{
         return $this->fetchOne("select * from categories where cat_id='$id'");
     }
 
+
+    function select_one_category_name($id){
+        //return associative array or false
+        return $this->fetchOne("select cat_name from categories where cat_id='$id'");
+    }
+
     //method for update one brand
     function update_one_category($cat_id, $cat_name){
         //return true or false

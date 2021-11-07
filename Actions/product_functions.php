@@ -1,5 +1,4 @@
 <?php
- 
 require('../Controllers/product_controller');
 //Function to select all products
 function all_products(){
